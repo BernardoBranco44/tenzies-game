@@ -63,3 +63,8 @@ button:active{
 .held{
   background-color: #59E391;
 }
+
+.rolls{
+  font-size: 20px;
+  font-weight: 500;
+}

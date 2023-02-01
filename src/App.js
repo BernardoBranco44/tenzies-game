@@ -7,6 +7,7 @@ import Confetti from 'react-confetti'
 function App() {
   const [dicesArray, setDicesArray] = useState(newDices())
   const [tenzies, setTenzies] = useState(false)
+  const [rolls, setRolls] = useState(0)
 
 const dices = dicesArray.map(die => <Die key={die.id} value={die.value} isHeld={die.isHeld} holdDice={() => holdDice(die.id )}/>)
 
@@ -31,7 +32,9 @@ const dices = dicesArray.map(die => <Die key={die.id} value={die.value} isHeld={
     if (tenzies) {
       setDicesArray(newDices())
       setTenzies(false)
+      setRolls(0)
     } else {
+      setRolls(prevValue => prevValue + 1)
       setDicesArray(oldArray => oldArray.map(die =>{
         return die.isHeld ?
         die :
@@ -53,6 +56,7 @@ const dices = dicesArray.map(die => <Die key={die.id} value={die.value} isHeld={
         {dices}
       </div>
       <button onClick={rollDice}>{tenzies ? "Reset Game" : "Roll"}</button>
+      <p className='rolls'>Rolls: {rolls}</p>
     </main>
   );
 }
