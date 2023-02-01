@@ -1,0 +1,65 @@
+main{
+  height: 89vh;
+  margin: 50px;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 40px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.instructions {
+  font-family: 'Inter', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 30px;
+  padding: 20px 0 100px 0;
+}
+
+.dice{
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  height: 80px;
+  width: 80px;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+button{
+  padding: 15px 50px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 7px;
+  background-color: #5035FF;
+  color: white;
+  border: none;
+  box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
+button:active{
+  background-color: #301ea5;
+  transition: 0.1s;
+  box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.561);
+}
+
+.held{
+  background-color: #59E391;
+}
